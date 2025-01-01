@@ -1,3 +1,4 @@
+import 'package:dicee/auth_pages/login.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
@@ -134,7 +135,13 @@ class _DiceeState extends State<Dicee> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: const Color.fromARGB(42, 0, 0, 0),
-          leading: const Icon(Icons.menu_outlined),
+          leading: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                //move to another page
+
+                const Login();
+              }),
           title: const Text(
             "Money Dice play",
             style: TextStyle(fontSize: 15),
